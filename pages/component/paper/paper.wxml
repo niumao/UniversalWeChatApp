@@ -1,0 +1,15 @@
+
+<view class="container">
+  <view class="page-hd">
+    <image class="image" src="{{imgUrl}}"/>
+  </view>
+  <view class="page-bd">
+    <view class="page-bd-title">{{title}}</view>
+    <view class="page-bd-subtitle">{{subtitle}}</view>
+    <view class="page-bd-container">{{article}}</view>
+    <video id="caseVideo" src="{{videoUrl}}" binderror="videoErrorCallback" danmu-list="{{danmuList}}"></video>
+  </view>
+  <view class="page-ft">
+  </view>
+
+</view>

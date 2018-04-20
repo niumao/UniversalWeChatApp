@@ -1,0 +1,41 @@
+.home{
+  color:darkslategrey;
+}
+.home-hd {
+  padding: 50rpx 30rpx;
+  margin-bottom:30rpx;
+  text-align: center;
+}
+.home-bd {
+  padding: 0 30rpx 40rpx;
+}
+
+.case-list-title {
+  padding-left:10rpx;
+  flex: 1;
+  font-size: 38rpx;
+}
+.case-list-item {
+  margin: 30rpx 0;
+  background-color: #FFFFFF;
+  border-radius: 4rpx;
+  overflow: hidden;
+}
+.case-list-item-img {
+  width: 100%;
+  height: 360rpx;
+}
+.case-list-item-title {
+  padding: 10rpx 30rpx;
+  display: flex;
+  align-items: center;
+
+  transition: opacity .3s;
+}
+.case-list-item-text {
+  padding: 0 30rpx 30rpx 30rpx;
+  display: flex;
+  align-items: center;
+
+  transition: opacity .3s;
+}

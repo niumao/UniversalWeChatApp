@@ -1,0 +1,35 @@
+.page-hd{
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.page-bd{
+  padding: 30rpx;
+}
+.page-bd-title{
+  font-style:oblique;
+  font-weight:700;
+  font-size:50rpx;
+  letter-spacing: 1rpx;
+  padding-bottom: 15rpx;
+  text-align:center;
+}
+.page-bd-subtitle{
+  font-style:italic;
+  font-weight:100;
+  font-size:20rpx;
+  letter-spacing: 1rpx;
+  padding-bottom: 15rpx;
+}
+.page-bd-container{
+  padding:30rpx 0;
+  font-style: normal;
+  font-weight:300;
+  font-size:30rpx;
+  letter-spacing: 1rpx;
+}
+.page-ft{
+  padding: 50rpx;
+  display: flex;
+  align-items: center;
+}

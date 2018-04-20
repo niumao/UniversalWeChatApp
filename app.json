@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/component/home/home",
+    "pages/component/paper/paper",
+    "pages/component/index/index",
+    "pages/component/addCgi/addCgi"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "DODOWED",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 60000,
+    "uploadFile": 10000
+  },
+  "debug": true
+}
