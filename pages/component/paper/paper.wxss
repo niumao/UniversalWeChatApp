@@ -1,3 +1,4 @@
+@import "../../wxParse/wxParse.wxss";
 .page-hd{
   padding: 30rpx;
   display: flex;

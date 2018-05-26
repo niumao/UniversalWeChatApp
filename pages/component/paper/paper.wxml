@@ -1,15 +1,18 @@
-
+<import src="../../wxParse/wxParse.wxml"/>
 <view class="container">
   <view class="page-hd">
-    <image class="image" src="{{imgUrl}}"/>
+    <image class="image" src="{{cover}}"/>
   </view>
   <view class="page-bd">
     <view class="page-bd-title">{{title}}</view>
-    <view class="page-bd-subtitle">{{subtitle}}</view>
-    <view class="page-bd-container">{{article}}</view>
-    <video id="caseVideo" src="{{videoUrl}}" binderror="videoErrorCallback" danmu-list="{{danmuList}}"></video>
+    <view class="page-bd-subtitle">{{descr}}</view>
+    
+    <view class="page-bd-container"><template is="wxParse" data="{{wxParseData:wxContent.nodes }}"/></view>
   </view>
   <view class="page-ft">
+<block wx:if="{{video?true:false}}">
+    <video id="caseVideo" src="{{video}}" binderror="videoErrorCallback"></video>
+</block>
   </view>
 
 </view>

@@ -1,15 +1,24 @@
 // pages/home/index.js
+var WxParse = require('../../wxParse/wxParse.js');
 Page({
   data: {
-    pId:1,
-    imgUrl: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-    title:'wed case show',
-    subtitle:'wed case subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle',
-    article:'wed desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc',
-    videoUrl: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
   },
   onLoad: function (options) {
-
+    self = this;
+    var cId = options.id;
+    wx.request({
+      url: '' + cId,
+      success: function (res) {
+        console.log(res.data)
+        var caseData = res.data;
+        var wxContent = caseData.content;
+        WxParse.wxParse('wxContent', 'html', wxContent, self, 5);
+        self.setData({
+          pId: caseData.caseId, title: caseData.title, cover: caseData.cover, descr: caseData.descr, video:caseData.video,
+          content: wxContent,
+        })
+      }
+    })
   },
   onReady: function () {
 

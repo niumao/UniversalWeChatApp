@@ -12,9 +12,9 @@
       <view class="case-list-title">精选案例</view>
       <block wx:for-items="{{case}}" wx:key="{{idx}}">
         <view class="case-list-item" id="{{item.id}}" bindtap="caseTap">
-            <image class="case-list-item-img" src="../../resources/kind/case-{{item.id}}.jpg"></image>
+            <image class="case-list-item-img" src="{{ item.cover }}"></image>
             <view class="case-list-item-title">{{item.name}}</view>
-            <view class="case-list-item-text">{{item.desc}}</view>
+            <view class="case-list-item-text">{{item.descr}}</view>
         </view>
       </block>
   </view>

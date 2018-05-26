@@ -33,18 +33,38 @@ Page({
   },
   caseTap: function (e) {
     var id = e.currentTarget.id, list = this.data.case;
-    wx.navigateTo({ url: "../../../pages/component/paper/paper",
+    wx.navigateTo({ url: "../../../pages/component/paper/paper?id=" + id,
       success: function (e) {
-        console.log(e)
       } });
   },
   onLoad: function (options) {
     this.setData({
       imageWidth: wx.getSystemInfoSync().windowWidth,
-    })
+    });
   },
   onReady: function () {
-  
+    self = this;
+    wx.request({
+      url: '',
+      success: function (res) {
+        self.setData({
+          case: res.data,
+        })
+      }
+    })
+    wx.request({
+      url: '',
+      success: function (res) {
+        var slider = JSON.parse(res.data.data)
+        console.log(slider.title)
+        wx.setNavigationBarTitle({
+          title: slider.title,
+        })  
+        self.setData({
+          'swiper.imgUrls': [slider.slider1, slider.slider2, slider.slider3],
+        })
+      }
+    })
   },
   onShow: function () {
   
